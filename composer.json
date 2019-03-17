@@ -1,0 +1,23 @@
+{
+  "name": "meletisf/laravel-zen-doctor",
+  "description": "A package for providing the health state of the application in order to help load balancers",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Meletios Flevarakis",
+      "email": "m.flevarakis@acg.edu"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Meletisf\\ZenDoctor\\ZenDoctorServiceProvider"
+      ],
+      "aliases": {
+        "ZenDoctor": "Meletisf\\ZenDoctor\\Facades\\ZenDoctor"
+      }
+    }
+  },
+  "require": { }
+}
