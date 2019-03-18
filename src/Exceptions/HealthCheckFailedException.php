@@ -2,4 +2,6 @@
 
 namespace Meletisf\ZenDoctor\Exceptions;
 
-class HealthCheckFailedException extends \Exception {}
+class HealthCheckFailedException extends \Exception
+{
+}

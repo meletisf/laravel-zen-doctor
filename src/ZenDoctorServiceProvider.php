@@ -10,12 +10,13 @@ class ZenDoctorServiceProvider extends ServiceProvider
     /**
      * Register services.
      *
-     * @return void
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     *
+     * @return void
      */
     public function register()
     {
-        $this->mergeConfigFrom( __DIR__ . '/config/zen-doctor.php', 'zen-doctor' );
+        $this->mergeConfigFrom(__DIR__.'/config/zen-doctor.php', 'zen-doctor');
         $this->app->make('Meletisf\ZenDoctor\Http\Controllers\HealthController');
     }
 
@@ -26,13 +27,12 @@ class ZenDoctorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (config('zen-doctor.expose_default_routes'))
-        {
-            $this->loadRoutesFrom( __DIR__ . '/routes.php' );
+        if (config('zen-doctor.expose_default_routes')) {
+            $this->loadRoutesFrom(__DIR__.'/routes.php');
         }
 
         $this->publishes([
-            __DIR__ . '/config/zen-doctor.php' => config_path('zen-doctor.php')
+            __DIR__.'/config/zen-doctor.php' => config_path('zen-doctor.php'),
         ]);
 
         $this->app->singleton(ZenDoctorFacade::class, function () {

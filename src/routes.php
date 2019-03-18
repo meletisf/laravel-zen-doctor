@@ -1,4 +1,3 @@
 <?php
 
-Route::get("_health", "Meletisf\ZenDoctor\Http\Controllers\HealthController@index");
-
+Route::get('_health', "Meletisf\ZenDoctor\Http\Controllers\HealthController@index");

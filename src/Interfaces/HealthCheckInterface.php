@@ -4,10 +4,8 @@ namespace Meletisf\ZenDoctor\Interfaces;
 
 interface HealthCheckInterface
 {
-
     /**
-     * @return boolean
+     * @return bool
      */
-    function check(): bool;
-
+    public function check(): bool;
 }

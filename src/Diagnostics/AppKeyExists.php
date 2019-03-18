@@ -7,18 +7,19 @@ use Meletisf\ZenDoctor\Interfaces\HealthCheckInterface;
 
 class AppKeyExists extends ZenDoctorCheckAbstract implements HealthCheckInterface
 {
-
-    protected $message = "APP_KEY is not set!";
+    protected $message = 'APP_KEY is not set!';
 
     /**
-     * Check if the APP_KEY is set
+     * Check if the APP_KEY is set.
+     *
      * @return bool
      */
-    function check(): bool
+    public function check(): bool
     {
-        if ( env('APP_KEY') == null )
+        if (env('APP_KEY') == null) {
             return false;
+        }
+
         return true;
     }
-
 }

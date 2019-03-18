@@ -13,7 +13,7 @@ return [
         \Meletisf\ZenDoctor\Diagnostics\EnvFileExists::class,
         \Meletisf\ZenDoctor\Diagnostics\AppKeyExists::class,
         \Meletisf\ZenDoctor\Diagnostics\EnvironmentIsProduction::class,
-        \Meletisf\ZenDoctor\Diagnostics\DebugIsOff::class
+        \Meletisf\ZenDoctor\Diagnostics\DebugIsOff::class,
     ],
 
     /*
