@@ -33,7 +33,7 @@ class ZenDoctorServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/config/zen-doctor.php' => config_path('zen-doctor.php'),
-        ]);
+        ], 'config');
 
         $this->app->singleton(ZenDoctorFacade::class, function () {
             return new ZenDoctor(
