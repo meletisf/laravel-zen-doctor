@@ -1,6 +1,13 @@
 {
   "name": "meletisf/laravel-zen-doctor",
-  "description": "A package for providing the health state of the application in order to help load balancers",
+  "description": "A package for providing the health state of the application in order to help load balancers determine the pool membership",
+  "keywords": [
+    "laravel",
+    "health",
+    "healthcheck",
+    "load",
+    "balancer"
+  ],
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -9,6 +16,22 @@
       "email": "m.flevarakis@acg.edu"
     }
   ],
+  "require": {
+    "php" : ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7|6.2|^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Meletisf\\ZenDoctor\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Meletisf\\ZenDoctor\\Test\\": "tests"
+    }
+  },
   "extra": {
     "laravel": {
       "providers": [
@@ -18,6 +41,5 @@
         "ZenDoctor": "Meletisf\\ZenDoctor\\Facades\\ZenDoctor"
       }
     }
-  },
-  "require": { }
+  }
 }
