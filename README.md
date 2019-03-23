@@ -1,13 +1,28 @@
 # Laravel Zen Doctor
 
-Doctor is a package that is used in conjunction with a load balancer's health check functionality in order to ensure that no dysfunctional node attempts to serve traffic to the end users.
+ZenDoctor is a package that is used in conjunction with a load balancer's 
+health check feature in order to ensure that no dysfunctional node attempts to serve
+the user.
 
-The vast majority of load balancers are sending an HTTP request to a designated route (for every node) and it that route happens to return back
-a response with an HTTP status of 500 (Internal Server Error) the node will be isolated from the pool and based on the configuration will stay
-like that for a designated period.
+## Installation
 
-Read the **Wiki** for more information on how to setup the package, use in along with load balancers and different tools, and write your own checks.
+```bash
+composer require laravel/framework
+```
 
-### Warning
+The package will automatically register itself. 
 
-At this point in time the package is under heavy development and breaking changes may occur.
+## Issues
+
+If something doesn't work as indented or you want to suggest a change, please open an issue.
+
+## TODO
+
++ Improve the test coverage
++ Add the ability to pass custom valued to the check from the config file
+
+---
+
+Read the **[Wiki](https://github.com/meletisf/laravel-zen-doctor/wiki)** for more information on how to setup the package, use in along with load balancers and different tools, and write your own checks.
+
+**It is not tested with Lumen!**
