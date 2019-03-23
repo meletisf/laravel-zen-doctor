@@ -7,7 +7,6 @@ use Meletisf\ZenDoctor\Test\TestCase;
 
 class EnvironmentIsProductionTest extends TestCase
 {
-
     /** @test */
     public function it_fails_when_environment_is_not_set_to_production()
     {
@@ -27,5 +26,4 @@ class EnvironmentIsProductionTest extends TestCase
             (new EnvironmentIsProduction())->check()
         );
     }
-
 }

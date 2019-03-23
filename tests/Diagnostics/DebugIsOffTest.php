@@ -7,7 +7,6 @@ use Meletisf\ZenDoctor\Test\TestCase;
 
 class DebugIsOffTest extends TestCase
 {
-
     /** @test */
     public function it_fails_when_debug_is_on()
     {
@@ -27,5 +26,4 @@ class DebugIsOffTest extends TestCase
             (new DebugIsOff())->check()
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Meletisf\ZenDoctor\Interfaces\HealthCheckInterface;
 
 class PassingMockCheck extends ZenDoctorCheckAbstract implements HealthCheckInterface
 {
-
     protected $message = 'passing_mock_check_message';
 
     /**
