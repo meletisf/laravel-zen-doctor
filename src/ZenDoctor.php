@@ -36,6 +36,7 @@ class ZenDoctor
      * Add an array of checks.
      *
      * @param array $checks
+     *
      * @return void
      */
     public function addChecks(array $checks): void
@@ -59,6 +60,7 @@ class ZenDoctor
      * Add a single check.
      *
      * @param HealthCheckInterface $check
+     *
      * @return void
      */
     public function addCheck(HealthCheckInterface $check): void
@@ -68,7 +70,9 @@ class ZenDoctor
 
     /**
      * Run all checks.
+     *
      * @throws \Exception
+     *
      * @return void
      */
     public function runDiagnostics(): void
@@ -80,7 +84,9 @@ class ZenDoctor
 
     /**
      * @param HealthCheckInterface $healthcheck
+     *
      * @throws \Exception
+     *
      * @return void
      */
     public function runDiagnostic(HealthCheckInterface $healthcheck): void
@@ -95,8 +101,10 @@ class ZenDoctor
     /**
      * Handle a failure.
      *
-     * @throws \Exception
      * @param HealthCheckInterface $check
+     *
+     * @throws \Exception
+     *
      * @return void
      */
     protected function fail(HealthCheckInterface $check): void
@@ -112,6 +120,7 @@ class ZenDoctor
      * Handle a success.
      *
      * @param HealthCheckInterface $check
+     *
      * @return void
      */
     protected function succeed(HealthCheckInterface $check): void
@@ -125,6 +134,7 @@ class ZenDoctor
      * Set the exception.
      *
      * @param \Exception $e
+     *
      * @return void
      */
     public function setException($e): void

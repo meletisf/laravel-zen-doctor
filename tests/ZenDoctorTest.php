@@ -8,12 +8,11 @@ use Meletisf\ZenDoctor\ZenDoctor;
 
 class ZenDoctorTest extends TestCase
 {
-
     /** @test */
     public function constructor_registers_the_checks()
     {
         $zd = new ZenDoctor([
-            PassingMockCheck::class
+            PassingMockCheck::class,
         ], null, false);
 
         $checks = $zd->getChecks();
@@ -47,8 +46,10 @@ class ZenDoctorTest extends TestCase
         \Event::fake();
         $zd = new ZenDoctor([], MockException::class, true);
 
-        try { $zd->runDiagnostic(new FailingMockCheck()); }
-        catch (\Exception $e) { \Event::assertDispatched(CheckFailed::class); }
+        try {
+            $zd->runDiagnostic(new FailingMockCheck());
+        } catch (\Exception $e) {
+            \Event::assertDispatched(CheckFailed::class);
+        }
     }
-
 }

@@ -7,7 +7,6 @@ use Meletisf\ZenDoctor\Test\TestCase;
 
 class AppKeyExistsTest extends TestCase
 {
-
     /** @test */
     public function it_fails_when_the_key_is_missing()
     {
@@ -27,5 +26,4 @@ class AppKeyExistsTest extends TestCase
             (new AppKeyExists())->check()
         );
     }
-
 }
