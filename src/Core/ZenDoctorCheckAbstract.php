@@ -10,6 +10,21 @@ abstract class ZenDoctorCheckAbstract
     protected $message;
 
     /**
+     * @var array
+     */
+    protected $config;
+
+    /**
+     * ZenDoctorCheckAbstract constructor.
+     *
+     * @param array|null $config
+     */
+    public function __construct(array $config = null)
+    {
+        $this->config = $config;
+    }
+
+    /**
      * Get the check message.
      *
      * @return string

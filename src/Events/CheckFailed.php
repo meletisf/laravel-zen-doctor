@@ -6,7 +6,7 @@ use Meletisf\ZenDoctor\Interfaces\HealthCheckInterface;
 
 class CheckFailed
 {
-    protected $check;
+    public $check;
 
     /**
      * CheckFailed constructor.

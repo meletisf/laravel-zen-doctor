@@ -10,12 +10,6 @@ class HealthController extends Controller
 {
     public function index(Request $request)
     {
-        foreach (ZenDoctor::getChecks() as $check) {
-            try {
-                ZenDoctor::runDiagnostic($check);
-            } catch (\Exception $e) {
-                print_r($e->getMessage().'<hr />');
-            }
-        }
+        ZenDoctor::runDiagnostics();
     }
 }

@@ -16,7 +16,7 @@ class AppKeyExists extends ZenDoctorCheckAbstract implements HealthCheckInterfac
      */
     public function check(): bool
     {
-        if (env('APP_KEY') == null) {
+        if (config('app.key') == null) {
             return false;
         }
 

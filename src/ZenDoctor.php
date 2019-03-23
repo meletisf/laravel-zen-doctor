@@ -36,8 +36,9 @@ class ZenDoctor
      * Add an array of checks.
      *
      * @param array $checks
+     * @return void
      */
-    public function addChecks(array $checks)
+    public function addChecks(array $checks): void
     {
         foreach ($checks as $check) {
             $this->addCheck(new $check());
@@ -58,16 +59,19 @@ class ZenDoctor
      * Add a single check.
      *
      * @param HealthCheckInterface $check
+     * @return void
      */
-    public function addCheck(HealthCheckInterface $check)
+    public function addCheck(HealthCheckInterface $check): void
     {
         array_push($this->healthchecks, $check);
     }
 
     /**
      * Run all checks.
+     * @throws \Exception
+     * @return void
      */
-    public function runDiagnostics()
+    public function runDiagnostics(): void
     {
         foreach ($this->healthchecks as $healthcheck) {
             $this->runDiagnostic($healthcheck);
@@ -76,8 +80,10 @@ class ZenDoctor
 
     /**
      * @param HealthCheckInterface $healthcheck
+     * @throws \Exception
+     * @return void
      */
-    public function runDiagnostic(HealthCheckInterface $healthcheck)
+    public function runDiagnostic(HealthCheckInterface $healthcheck): void
     {
         if (!$healthcheck->check()) {
             $this->fail($healthcheck);
@@ -89,9 +95,11 @@ class ZenDoctor
     /**
      * Handle a failure.
      *
+     * @throws \Exception
      * @param HealthCheckInterface $check
+     * @return void
      */
-    protected function fail(HealthCheckInterface $check)
+    protected function fail(HealthCheckInterface $check): void
     {
         if ($this->broadcast_events) {
             event(new CheckFailed($check));
@@ -104,8 +112,9 @@ class ZenDoctor
      * Handle a success.
      *
      * @param HealthCheckInterface $check
+     * @return void
      */
-    protected function succeed(HealthCheckInterface $check)
+    protected function succeed(HealthCheckInterface $check): void
     {
         if ($this->broadcast_events) {
             event(new CheckPassed($check));
@@ -116,8 +125,9 @@ class ZenDoctor
      * Set the exception.
      *
      * @param \Exception $e
+     * @return void
      */
-    public function setException($e)
+    public function setException($e): void
     {
         $this->exception = $e;
     }

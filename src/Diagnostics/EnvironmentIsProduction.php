@@ -16,8 +16,9 @@ class EnvironmentIsProduction extends ZenDoctorCheckAbstract implements HealthCh
      */
     public function check(): bool
     {
-        if (config('APP_ENV') != 'production') {
+        if (config('app.env') != 'production') {
             return false;
         }
+        return true;
     }
 }

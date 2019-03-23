@@ -12,6 +12,8 @@ class EnvFileExists extends ZenDoctorCheckAbstract implements HealthCheckInterfa
     /**
      * Check if the .env file exists.
      *
+     * TODO: Make this part testable
+     * @codeCoverageIgnore
      * @return bool
      */
     public function check(): bool

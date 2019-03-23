@@ -6,7 +6,7 @@ use Meletisf\ZenDoctor\Interfaces\HealthCheckInterface;
 
 class CheckPassed
 {
-    protected $check;
+    public $check;
 
     /**
      * CheckPassed constructor.

@@ -16,7 +16,7 @@ class DebugIsOff extends ZenDoctorCheckAbstract implements HealthCheckInterface
      */
     public function check(): bool
     {
-        if (env('APP_DEBUG') == true) {
+        if (config('app.debug') == true) {
             return false;
         }
 

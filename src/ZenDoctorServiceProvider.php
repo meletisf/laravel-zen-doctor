@@ -5,6 +5,7 @@ namespace Meletisf\ZenDoctor;
 use Illuminate\Support\ServiceProvider;
 use Meletisf\ZenDoctor\Facades\ZenDoctor as ZenDoctorFacade;
 
+/** @codeCoverageIgnore  */
 class ZenDoctorServiceProvider extends ServiceProvider
 {
     /**
