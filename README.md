@@ -7,7 +7,7 @@ the user.
 ## Installation
 
 ```bash
-composer require laravel/framework
+composer require meletisf/laravel-zen-doctor
 ```
 
 The package will automatically register itself. 
